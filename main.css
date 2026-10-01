@@ -1,0 +1,117 @@
+
+              /* Comentarios en CSS */
+
+/* general styles */
+
+*{ 
+    box-sizing: border-box; /* Forma en que se copila el sitio, crea todos los atributos en cajas */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 20px 0 20px; /* margenes arriba, derecha, abajo, izquierda */
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0F1C30;
+    color: #C2C6CE;
+}
+
+
+/* header styles */
+
+header{
+    padding: 25px 40px; /* margen superior e inferior, margenes laterales */
+    
+}
+
+nav{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a, nav button{
+
+    color: #C0D0EF; /* color de texto */
+    font-family: inherit; /* inherit ereda la tipografia ya establecida */
+    font-size: 14px; /* cambia el tamano de la tipografia, rem es una medida dinamica para tipografias pero tambien se puede poner px o porcentaje */
+    cursor: pointer; /* es para que salga la manita al escrolear */
+    
+    text-decoration: none; /* al enlace le quita la decoracion de subrrallado, se le puede agregar otras lineas o tipos de lineas */
+    background: none; /* decorado del boton, en este ejemplo lo quitamos */
+    border: none;
+}
+
+nav a:hover, nav button:hover{ /*hover es para que al escrolear sobre el enlace cambia de color */
+
+    color: #668DC0;
+    opacity: 0.5;
+
+}
+  
+
+/* para dotar estilos 
+#obra{}
+
+.obra1{} */
+
+.obras {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+/* Contenedor de cada obra */
+.obra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: #304A6E;
+    border: 1px solid #668DC0;
+    border-radius: 8px;
+    padding: 30px;
+    gap: 30px;
+}
+
+/* Intercambiar el orden (imagen a la derecha y descripcion a la izquierda) en las obras pares */
+.obras .obra:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Estilos de las imagenes */
+.image {
+    width: 50%;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+    border-radius: 4px;
+    border: 2px solid #668DC0;
+}
+
+/* Placeholders visuales para cada imagen si aun no cargas imagenes reales */
+.obra1 {
+    background-color: #668DC0;
+    background-image: url(https://arrieta-garcia.netlify.app/img/museo/hero.jpg);
+    background-repeat: no-repeat;
+}
+
+.obra2 {
+    background-color: #C0D0EF;
+    background-image: url(https://arrieta-garcia.netlify.app/img/AMA/mm3.png);
+    background-repeat: no-repeat;
+}
+
+.obra3 {
+    background-color: #C2C6CE;
+    background-image: url(https://arrieta-garcia.netlify.app/img/uam/hero.jpg);
+    background-repeat: no-repeat;
+}
+
+h2 a {
+    color: white;
+    text-decoration: none;
+} 
